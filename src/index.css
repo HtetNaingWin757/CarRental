@@ -1,0 +1,428 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home {
+  position: relative;
+  background-color: #ffffff;
+  background-image: url(images/hero/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: 750px;
+  background-position: top right;
+  z-index: 0;
+}
+
+.choose-us {
+  background-image: url("./images/chooseUs/bg.png");
+  background-repeat: no-repeat;
+  background-size: 950px;
+  background-position: bottom left;
+}
+
+.active-btn {
+  background-color: #ff4d30;
+  color: white;
+}
+
+.nav:hover {
+  color: #ff4d30;
+  transition: 0.2s;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.book {
+  background-color: white;
+  background-image: url(images/book-car/book-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text {
+  color: #ff4d30;
+}
+
+.btn {
+  background-color: #ff4d30;
+  box-shadow: 0px 5px 20px #ff9175d2;
+}
+
+.btn:hover {
+  background-color: #f82100;
+  box-shadow: 0 5px 20px #ff4c20d2;
+  transition: 0.5s;
+}
+
+.btn-model:hover {
+  background-color: #ff4d30;
+  color: white;
+  transition: 0.2s;
+}
+
+.faq {
+  background-image: url(./images/faq/car.png);
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: bottom left;
+}
+
+.answer {
+  height: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.active-answer {
+  height: auto;
+  padding: 28px 0;
+}
+
+.active-question {
+  background-color: #ff4d30;
+  color: white;
+  border-bottom: 0;
+  box-shadow: 0px 5px 20px #ff9175d2;
+}
+
+.download {
+  background-image: url(./images/banners/bg02.png);
+  background-size: 1425px;
+  background-repeat: no-repeat;
+}
+
+.contact:hover {
+  color: #ff4d30;
+  transition: 0.2s;
+}
+
+.mobileMenu {
+  position: absolute;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 0.7s ease-in-out;
+}
+
+.mobileMenuOpen {
+  left: 0;
+}
+
+.hero::after {
+  content: "";
+  background-color: #efeeedd8;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.book-section {
+  background-image: url("./images/banners/book-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.book-section::after {
+  content: "";
+  background-color: #282828db;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Desktop */
+
+@media screen and (max-width: 1000px) {
+  .hero-text {
+    width: 500px;
+    margin-top: 25px;
+    text-align: center;
+  }
+  .hero-btn {
+    justify-content: center;
+  }
+  .home {
+    background-image: none;
+  }
+  .hero-car {
+    display: none;
+  }
+  .book-input {
+    width: 350px;
+  }
+  .book-btn {
+    width: 350px;
+  }
+  .booking {
+    margin: 80px 20px;
+  }
+  .book-form {
+    padding: 40px 20px;
+  }
+  .plan {
+    padding: 50px 10px;
+  }
+  .plan-container {
+    padding: 10px 50px;
+    justify-content: center;
+    gap: 50px;
+  }
+  .car-model {
+    padding: 50px 20px;
+  }
+  .model-names {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .model-img {
+    width: 450px;
+    height: 235px;
+  }
+  .why-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 20px;
+  }
+  .message-2 {
+    display: none;
+  }
+  .testimonial {
+    padding: 50px 20px;
+  }
+  .testimonial-header {
+    width: 100%;
+  }
+  .testimonial-body {
+    width: 100%;
+    justify-content: center;
+  }
+  .message-1 {
+    padding: 20px 20px;
+  }
+  .choose-us-car {
+    padding: 0px 20px;
+  }
+  .choose-us-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .choose-us-card-body {
+    text-align: center;
+  }
+  .why-us-container {
+    padding: 50px 20px;
+  }
+  .why-us {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 20px;
+  }
+  .why-us-text {
+    text-align: center;
+  }
+  .faq {
+    padding: 0 20px;
+    background-image: url(./images/faq/car.png);
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: bottom left;
+  }
+  .faq-accordion {
+    width: 100%;
+    margin: 0 50px;
+  }
+  .download {
+    background-image: url(./images/banners/bg02.png);
+    background-size: 1425px;
+    background-repeat: no-repeat;
+    background-position: -280px 0px;
+  }
+  .book-section {
+    justify-content: space-between;
+    padding: 30px 20px;
+  }
+  .book-contact {
+    margin: 0;
+  }
+  .book-title {
+    width: 370px;
+    text-align: start;
+  }
+  .venhicle-model {
+    padding: 96px 20px;
+  }
+  .contact-form-input {
+    text-align: center;
+  }
+  .contact-form {
+    width: 100vw;
+  }
+  .additional-info {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .contact-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Phone */
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    padding: 20px 20px;
+  }
+  .logo {
+    width: 140px;
+  }
+  .hero-btn {
+    flex-direction: column;
+  }
+  .primary-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .book-input {
+    width: 100%;
+  }
+  .model-container {
+    justify-content: center;
+  }
+  .model-img {
+    margin-bottom: 50px;
+  }
+  .save {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .save-title {
+    font-size: 45px;
+  }
+  .save-body {
+    font-size: 23px;
+  }
+  .faq-header {
+    width: 350px;
+  }
+  .faq-accordion {
+    width: 350px;
+    margin: 0 50px;
+  }
+  .download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: none;
+    width: auto;
+    padding-left: 0px;
+  }
+  .download-body {
+    width: 350px;
+    margin-left: 0px;
+  }
+  .download-title {
+    text-align: center;
+  }
+  .download-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  .footer {
+    gap: 100px;
+  }
+  .footer > p,
+  h1,
+  a,
+  div > p {
+    text-align: center;
+  }
+  .contact > a {
+    justify-content: center;
+  }
+  .hero {
+    background-position: center;
+  }
+  .company-img {
+    height: 350px;
+  }
+  .company-des {
+    width: 350px;
+  }
+  .company-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .book-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px;
+    gap: 20px;
+  }
+  .book-title {
+    width: 360px;
+    text-align: center;
+  }
+  .book-contact {
+    margin: 0 auto;
+  }
+  .venhicle-model {
+    padding: 96px 20px;
+  }
+  .contact-form-input {
+    text-align: center;
+  }
+  .additional-info {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .additional-container {
+    width: 100%;
+  }
+}
+
+/* Desktop lg */
+
+@media screen and (max-width: 1050px) {
+  .mobileNav {
+    display: flex;
+  }
+  .navlink {
+    display: none;
+  }
+  .hero-car {
+    margin-left: -100px;
+  }
+}
